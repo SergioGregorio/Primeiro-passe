@@ -1,0 +1,63 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", system-ui, sans-serif;
+  --font-display: "Montserrat", system-ui, sans-serif;
+
+  --color-forest-950: #031e17;
+  --color-forest-900: #022c22;
+  --color-forest-800: #04392c;
+  --color-forest-700: #0a4a3a;
+
+  --color-gold-300: #fcd34d;
+  --color-gold-400: #fbbf24;
+  --color-gold-500: #f59e0b;
+
+  --color-ink-100: #f8fafc;
+  --color-ink-300: #cbd5e1;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--color-forest-950);
+  color: var(--color-ink-100);
+  font-family: var(--font-sans);
+}
+
+.font-display {
+  font-family: var(--font-display);
+}
+
+.gold-gradient-text {
+  background-image: linear-gradient(135deg, var(--color-gold-300), var(--color-gold-500));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.gold-gradient-bg {
+  background-image: linear-gradient(135deg, var(--color-gold-300), var(--color-gold-500));
+}
+
+.card-border {
+  border: 1px solid rgba(251, 191, 36, 0.15);
+}
+
+.card-surface {
+  background-color: rgba(4, 57, 44, 0.55);
+  backdrop-filter: blur(6px);
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-forest-950);
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(251, 191, 36, 0.4);
+  border-radius: 8px;
+}

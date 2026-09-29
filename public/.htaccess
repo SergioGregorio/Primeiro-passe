@@ -1,0 +1,19 @@
+# ============================================================================
+# Arquivo necessário para o site funcionar corretamente na Hostinger/HostGator.
+# Ele garante que, ao acessar diretamente uma página como "/sobre" ou
+# "/atleta/nome-do-atleta", o servidor carregue o site corretamente.
+# NÃO EXCLUA ESTE ARQUIVO ao fazer upload do site.
+# ============================================================================
+
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteBase /
+
+  # Se o arquivo ou pasta solicitado já existir, entrega ele normalmente.
+  RewriteCond %{REQUEST_FILENAME} -f [OR]
+  RewriteCond %{REQUEST_FILENAME} -d
+  RewriteRule ^ - [L]
+
+  # Caso contrário, redireciona tudo para o index.html (necessário para o site funcionar).
+  RewriteRule ^ index.html [L]
+</IfModule>

@@ -1,0 +1,9 @@
+Coloque aqui as fotos dos atletas (formato .jpg ou .png).
+
+Depois, no arquivo src/data/athletes.ts, no campo "foto" ou "fotoBanner"
+do atleta, use o caminho assim:
+
+  foto: "/atletas/nome-da-foto.jpg"
+
+Dica: dê nomes simples às fotos, sem espaços ou acentos.
+Exemplo: joao-silva.jpg, joao-silva-banner.jpg
